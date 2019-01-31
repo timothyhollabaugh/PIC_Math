@@ -1,0 +1,166 @@
+% THIS PART SET THE DESIGN OF THE REPORT. DO NOT MODIFY THIS SECTION: 
+
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath, amssymb, latexsym, amscd, amsthm,amsfonts,amstext}
+\usepackage[mathscr]{eucal}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{showlabels}
+%\usepackage[pagewise]{lineno}\linenumbers
+%\usepackage[nomarkers,figuresonly]{endfloat}
+
+
+% set paper size:
+ \textwidth = 16cm
+ \textheight = 22cm
+ \topmargin = -0.8cm
+ \headsep =20pt
+ \oddsidemargin = 15pt
+ \evensidemargin = -15pt
+ \renewcommand{\baselinestretch}{1.4} 
+ 
+ 
+% define new mathematics environments: 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{remark}{Remark}[section]
+\numberwithin{equation}{section}
+
+\pagestyle{myheadings}
+\makeatletter
+\renewcommand\tableofcontents{    \@starttoc{toc}}
+\makeatother
+
+
+% Define some macros: 
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Real}{Re}
+
+\def\bbC{\mathbb{C}}
+\def\bbH{\mathbb{H}}
+\def\bbR{\mathbb{R}}
+
+
+% DOCUMENT STARTS: 
+\begin{document}
+
+
+
+% START TO MODIFY FROM HERE: 
+
+\title{This is the title of your report}
+\author{Your Name$^{1}$ and Another Name$^2$ \\
+%EndAName
+\\
+$^1$Department of Mathematics, Rowan University, \\
+201 Mullica Hill Rd, Glassboro, NJ 08028, USA. \\
+Email: \texttt{Youremail@students.rowan.edu} \\
+$^2$Department of Mathematics, Rowan University, \\
+201 Mullica Hill Rd, Glassboro, NJ 08028, USA. \\
+Email: \texttt{Youremail@students.rowan.edu} \\
+}
+
+\date{}
+\maketitle
+
+\begin{abstract}
+One sentence abstract of your report. 
+\end{abstract}
+
+% -------------------------------------------------------
+\textbf{Keywords}: Keywork 1, keywork 2. 
+
+
+
+\section{Introduction} \label{sec:int} % this is called a label. We refer to each section via its label. 
+
+You can refer to any section like this: section  \ref{sec:int}, section \ref{sec:2}, etc. 
+
+
+When you discuss something from a reference (book, article, etc.) you have to cite it like this: see \cite{BKK}. 
+
+
+The new article to be cited: \cite{Bento:JAND2017}
+
+\section{Test}\label{sec:test}
+
+\section{Problem statement}\label{sec:2}
+
+A single equation can be written in the following form: 
+
+
+\begin{equation}\label{eq3}
+x + y = 3z.
+\end{equation}
+
+
+\begin{equation}\label{eq1}
+x + y = z.
+\end{equation}
+To refer to that equation, use this: (\ref{eq1}). 
+
+
+
+\begin{equation}\label{eq2}
+x + y = 2z.
+\end{equation}
+
+
+
+\section{Results}\label{sec:result} 
+
+A figure can be included in the text as follows. To refer to this figure, you can call, for example Figure \ref{fig1}.
+
+\begin{figure}[tph]
+\centering
+\includegraphics[width=0.6\textwidth]{DLR_A380_1.jpg}
+\caption{This is a caption of the figure.}
+\label{fig1}
+\end{figure}
+
+See figure \ref{fig1}
+
+A table can be created as follows: 
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|} % three columns, text is placed in the center of each column.
+\hline 
+1 & 3 & 2\\
+\hline 
+2& 4 & 6 \\
+\hline
+\end{tabular}
+\caption{Table 1: what is this table about?}
+\label{table1}
+\end{table} 
+ 
+ 
+
+ \section*{Acknowledgment}
+We will have to add an acknowledgment here. There is the phrase from PIC Math site to add to this section. 
+
+
+% Using bibtex database: 
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+
+%\begin{thebibliography}{10}
+%
+%\bibitem{BKK}
+%A.~Bakushinskii, M.~Klibanov, and N.~Koshev.
+%\newblock Carleman weight functions for a globally convergent numerical method
+%  for ill-posed cauchy problems for some quasilinear {PDEs}.
+%\newblock {\em Nonlinear Analysis: Real World Applications}, 34:201--224, 2017.
+%
+%\end{thebibliography}
+%
+
+
+
+\end{document}
