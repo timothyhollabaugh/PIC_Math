@@ -1,0 +1,18 @@
+#doodle.py
+pic = makeEmptyPicture(200,200, white)
+
+addLine(pic,100, 80, 100, 120, black)
+addLine(pic,70, 170, 100, 120, black)
+addLine(pic,130, 170, 100, 120, black)
+addLine(pic,100, 80, 70, 110, black)
+addLine(pic,100, 80, 130, 110, black)
+
+#radius will be 10
+xCenter= 100
+yCenter= 70
+#gonna try to draw a cirlce
+for pixel in pic.getPixels():
+  radius = sqrt((pixel.getX()-xCenter)**2+(pixel.getY()-yCenter)**2)
+  if (radius <= 10.5 and radius >= 9.5):
+    setColor(pixel, black)
+show(pic)
