@@ -24,7 +24,7 @@ There are several pre-processes which can assist in this task. Most notably, bin
 There is also a valuable need for discarding images which provide no information. The images come from a video feed, so a preprocessing method should be able to distinguish between a useful and non-useful image. For example, if binarization results in a totally white image, it is likely that no information is present on the image, and it can be discarded for efficiency.
 
 \section{charactarize Digits}
-
+We will need to characterize the digits. We will use Tensor Flow and train it to read the images. It will be important to explore machine learning options for this portion. 
 
 \section {Putting Digits back together}
 When isolating digits into smaller pixels and converting it into a binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers then identify the correct number. After it has created the algorithm, images will be uploaded into python and read numbers individually and show the three-digit number instantly for many images.
