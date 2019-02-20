@@ -15,14 +15,19 @@
 
 %ADD YOUR SECTION IN THE ORDER IN WHICH IT APPEARS IN THE "PLAN"
 
+\section{Segment Images into Digits}
+For this part of the code, we have to reduce the image inputted into smaller section of the image.  The plan is to isolate the digits numbers by reducing the output by pixel limit. Since the digits are always in the same location (center), we could isolate the digits into smaller data in which it could then binarized. 
+
 \section{Image Preprocessing}
 To assist in number recognition, it is useful to format the images in streamlined way before they are analyzed by the computer. This will prevent confusing the computer with unnecessary details which may be present in the image set.
 There are several pre-processes which can assist in this task. Most notably, binarizing an image, or converting each pixel to either black or white, would prevent any confusion on the basis of varying colors. This method ensures consistency in the images, which could be valuable in training the computer.
 There is also a valuable need for discarding images which provide no information. The images come from a video feed, so a preprocessing method should be able to distinguish between a useful and non-useful image. For example, if binarization results in a totally white image, it is likely that no information is present on the image, and it can be discarded for efficiency.
 
-\section{Segment Images into Digits}
-For this part of the code, we have to reduce the image inputted into smaller section of the image.  The plan is to isolate the digits numbers by reducing the output by pixel limit. Since the digits are always in the same location (center), we could isolate the digits into smaller data in which it could then binarized. 
+\section{charactarize Digits}
 
+
+\section {Putting Digits back together}
+After, isolating digits into smaller pixels and converting it into a  binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers and identify the correct number. 
 
 \begin{figure}[h!]
 \centering
