@@ -27,7 +27,8 @@ There is also a valuable need for discarding images which provide no information
 
 
 \section {Putting Digits back together}
-After, isolating digits into smaller pixels and converting it into a  binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers and identify the correct number. 
+When isolating digits into smaller pixels and converting it into a binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers then identify the correct number. After it has created the algorithm, images will be uploaded into python and read numbers individually and show the three-digit number instantly for many images.
+
 
 \begin{figure}[h!]
 \centering
