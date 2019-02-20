@@ -23,8 +23,8 @@ To assist in number recognition, it is useful to format the images in streamline
 There are several pre-processes which can assist in this task. Most notably, binarizing an image, or converting each pixel to either black or white, would prevent any confusion on the basis of varying colors. This method ensures consistency in the images, which could be valuable in training the computer.
 There is also a valuable need for discarding images which provide no information. The images come from a video feed, so a preprocessing method should be able to distinguish between a useful and non-useful image. For example, if binarization results in a totally white image, it is likely that no information is present on the image, and it can be discarded for efficiency.
 
-\section{charactarize Digits}
-
+\section{Charactarize Digits}
+This is where the actual number recognition happens. After being seperated, each character image will be send to a machine learning algorithm to classify the digit, 0-9. The TensorFlow machine learning library will be used at first, since it provides a nice API and many different machine learning algorithms available. Some of the digits will be seperated out for training and validation, likely about an 80-20 split.
 
 \section {Putting Digits back together}
 When isolating digits into smaller pixels and converting it into a binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers then identify the correct number. After it has created the algorithm, images will be uploaded into python and read numbers individually and show the three-digit number instantly for many images.
