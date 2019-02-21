@@ -29,6 +29,8 @@ This is where the actual number recognition happens. After being seperated, each
 \section {Putting Digits back together}
 When isolating digits into smaller pixels and converting it into a binary image, the image will show a low resolution on TensorFlow to recognize and identify the number and create an algorithm to process numbers then identify the correct number. After it has created the algorithm, images will be uploaded into python and read numbers individually and show the three-digit number instantly for many images.
 
+\section {TEST} 
+Hello world.
 
 \begin{figure}[h!]
 \centering
