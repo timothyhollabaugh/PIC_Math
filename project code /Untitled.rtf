@@ -11,16 +11,21 @@ import numpy as np\
 image=cv2.imread("test.gauge.jpeg")\
 print (image.shape)\
 #ratio adjustment\
-r = 200.0 / image.shape[1]\
-dim = (300, int(image.shape[0] * r))\
+#here we can adjust the ratio of image, set to 100 by 100 pixels.\
+r = 100.0 / image.shape[1]\
+dim = (100, int(image.shape[0] * r))\
  \
 # perform the actual resizing of the image and show it\
 resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)\
 #cv2.imshow("resized", resized)\
 \
-cropped =resized [50:130, 40:140]   \
+#here im cropping the image by row and columns. \
+cropped =resized [25:65, 20:70]   \
 cv2.imshow("cropped", cropped)\
 \
 \
 cv2.waitKey(0)\
-cv2.destroyAllWindows()}
+cv2.destroyAllWindows()\
+\
+#25,65 20,70\
+}
