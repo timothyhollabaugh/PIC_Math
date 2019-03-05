@@ -15,3 +15,4 @@ def load_images(path):
         images.append(img)
 
     return images
+print("hello world")
