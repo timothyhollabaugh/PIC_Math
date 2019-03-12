@@ -34,7 +34,7 @@ sharpened = cv2.filter2D(image, -1, kernel) # applying the sharpening kernel to 
 
 def crop_image (image):
     digit1 =image [7:15,4:9]   
-    digit2 =image [7:15, 9:14]
+    digit2 =image [7:15,9:14]
     digit3= image [7:15, 14:19]
     return (digit1,digit2,digit3)
     
