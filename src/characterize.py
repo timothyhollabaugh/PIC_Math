@@ -6,17 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def create_model(shape):
-    model = keras.Sequential([
-        keras.layers.Flatten(input_shape=shape),
-        keras.layers.Dense(128, activation=tf.nn.relu),
-        keras.layers.Dense(10, activation=tf.nn.softmax)
-    ])
-
-    model.compile(
-        optimizer='adam',
-        loss='sparse_categorical_crossentropy',
-        metrics=['acuracy']
-    )
+    n_samples = len(digits.im
 
 
 def train(model, images, labels):
