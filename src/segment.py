@@ -11,9 +11,12 @@ import numpy as np
 
 
 def crop_image(image):
-    cropped0 = image[28:60, 16:35]
-    cropped1 = image[28:60, 36:56]
-    cropped2 = image[28:60, 56:76]
+    # cropped0 = image[28:60, 16:35]
+    # cropped1 = image[28:60, 36:56]
+    # cropped2 = image[28:60, 56:76]
+    cropped0 = image[7:15,  4: 9]
+    cropped1 = image[7:15,  9:14]
+    cropped2 = image[7:15, 14:19]
     return (cropped0, cropped1, cropped2)
 
 
