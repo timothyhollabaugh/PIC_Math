@@ -9,8 +9,9 @@ import load_images
 #you're supposed to run this but also you need images to run it with
 #so take your image set and save it to its own folder
 #then you set the path to the folder with the images
+#in cmd, type "python manual_classify.py "(put your path here, in quotes)"
 #the program will run through all the images
-#you just gotta enter in the digit that you see
+#click on image window and enter in the digit that you see
 #if you don't know an image, enter a non-number character
 
 def manual_classify(path):
