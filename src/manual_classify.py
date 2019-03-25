@@ -32,14 +32,21 @@ def manual_classify_image(image):
 
     digit1, digit2, digit3 = cropped.crop_image(image)
 
+    # ratio adjustment
+    r = 100.0 / digit1.shape[1]
+    dim = (100, int(digit1.shape[0] * r))
+
+    digit1 = cv2.resize(digit1, dim, interpolation=cv2.INTER_AREA)
     cv2.imshow("digit", digit1)
     key1 = cv2.waitKey(0) - 48
     print(key1)
 
+    digit2 = cv2.resize(digit2, dim, interpolation=cv2.INTER_AREA)
     cv2.imshow("digit", digit2)
     key2 = cv2.waitKey(0) - 48
     print(key2)
 
+    digit3 = cv2.resize(digit3, dim, interpolation=cv2.INTER_AREA)
     cv2.imshow("digit", digit3)
     key3 = cv2.waitKey(0) - 48
     print(key3)
