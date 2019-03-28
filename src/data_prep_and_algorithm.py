@@ -24,6 +24,10 @@ import pandas as pd
 # Import datasets, classifiers and performance metrics
 from sklearn import svm, metrics
 
+#Make sure there is a / at the end
+#D:\Users\Kyril\Documents\School\PICmath software+files\sample data\kyril
+IMAGES_DIR = '../../sample data/kyril/kyril/'
+
 # The digits dataset
 dataset = pd.read_csv('kyril_ground_truth.csv', sep=',').values
 print(dataset)
@@ -38,25 +42,52 @@ meter_images = []
 
 all_digits = []
 
+digit_images = []
+digit_truths = []
+
 for element in dataset:
-    firstdigits+=dataset[element][0]
-    seconddigits+=dataset[element][1]
-    thirddigits+=dataset[element][2]
-    pic_filenames += dataset[element][3]
-    all_digits += firstdigits[element]
-    all_digits += seconddigits[element]
-    all_digits += thirddigits[element]
+    print(element)
+    filename = element[3].strip()
+    path, image = load_images.load_images(IMAGES_DIR + filename)[0]
+    if image is None:
+        print("Could not load image")
+        print(path)
+    else:
+        digit1, digit2, digit3 = cropped.crop_image(image)
+        
+        digit_truths.append(element[0])
+        digit_images.append(digit1)
 
-data = []
-data = load_images.load_images('D:\Users\Kyril\Documents\School\PICmath software+files\sample data\kyril\kyril')
+        digit_truths.append(element[1])
+        digit_images.append(digit2)
 
-all_segments = []
+        digit_truths.append(element[2])
+        digit_images.append(digit3)
+        
+    #firstdigits+=element[0]
+    #seconddigits+=element[1]
+    #thirddigits+=element[2]
+    #pic_filenames += element[3]
+    #all_digits += element[0]
+    #all_digits += element[1]
+    #all_digits += element[2]
 
-for pic in pic_filenames:
-    firstsegment, seconsegment, thirdsegment += cropped.crop_image(data[pic])
-    all_segments += firstsegment[pic]
-    all_segments += secondsegment[pic]
-    all_segments += thirdsegment[pic]
+print("Digit images")
+print(digit_images)
+
+print("Digit truths")
+print(digit_truths)
+
+#data = []
+#data = load_images.load_images('D:/Users/Kyril/Documents/School/PICmath software+files/sample data/kyril/kyril')
+
+#all_segments = []
+
+#for pic in pic_filenames:
+#    firstsegment, seconsegment, thirdsegment += cropped.crop_image(data[pic])
+#    all_segments += firstsegment[pic]
+##    all_segments += secondsegment[pic]
+#    all_segments += thirdsegment[pic]
 ###########################################################################################
 # Hey, Kyril here. I made an array called all_segments, which has individual-digit images.#
 # I also have one with all the digits (ground truth for each segment)                     #
