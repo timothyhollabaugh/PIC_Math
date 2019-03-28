@@ -14,7 +14,10 @@ import load_images
 #click on image window and enter in the digit that you see
 #if you don't know an image, enter a non-number character
 
+
+
 def manual_classify(path):
+    
 
     print("Loading images")
     images = load_images.load_images(path)
