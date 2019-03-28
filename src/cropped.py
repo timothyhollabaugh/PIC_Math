@@ -15,10 +15,14 @@ import numpy as np
 #image=cv2.imread("../meter.jpeg")
 #print (image.shape)
 #image = cv2.imread("../meter.jpeg")
-#kernel = np.array([[-1,-1,-1], 
-#                   [-1, 9,-1],
-#                   [-1,-1,-1]])
-#sharpened = cv2.filter2D(image, -1, kernel) # applying the sharpening kernel to the input image & displaying it.
+
+def sharpen(image):
+    kernel = np.array([[-1,-1,-1],
+                       [-1, 9,-1],
+                       [-1,-1,-1]])
+    sharpened = cv2.filter2D(image, -1, kernel) # applying the sharpening kernel to the input image & displaying it.
+    return sharpened
+
 #cv2.imshow('Image Sharpening', sharpened)
 
 
