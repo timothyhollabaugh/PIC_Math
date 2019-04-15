@@ -17,8 +17,6 @@ import load_images
 
 
 def manual_classify(path):
-    
-
     print("Loading images")
     images = load_images.load_images(path)
 
@@ -28,11 +26,13 @@ def manual_classify(path):
         filename = os.path.basename(path)
         print("Image: " + filename)
         (key1, key2, key3) = manual_classify_image(image)
-        outfile.write(str(key1) + ", " + str(key2) + ", " + str(key3)
-                      + ", " + filename + "\n")
 
         if key1 == -21 or key2 == -21 or key3 == -21:
+            print("Killed!")
             break
+        else:
+            outfile.write(str(key1) + ", " + str(key2) + ", " + str(key3) + ", " + filename + "\n")
+            os.remove(path)
 
     outfile.close()
 
