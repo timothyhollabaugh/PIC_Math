@@ -1,6 +1,6 @@
 """
 ================================
-Recognizing hand-written digits
+Recognizing Guage Digits
 ================================
 
 An example showing how the scikit-learn can be used to recognize images of
@@ -26,10 +26,10 @@ from sklearn import svm, metrics
 
 #Make sure there is a / at the end
 #D:\Users\Kyril\Documents\School\PICmath software+files\sample data\kyril
-IMAGES_DIR = '../../sample data/kyril/kyril/'
+IMAGES_DIR = '../../sample data/kyril/big_truth/Latitude(deg)/'
 
 # The digits dataset
-dataset = pd.read_csv('kyril_ground_truth.csv', sep=',').values
+dataset = pd.read_csv('big_truth.csv', sep=',').values
 print(dataset)
 firstdigits=[],
 seconddigits=[],
